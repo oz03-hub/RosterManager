@@ -1,6 +1,18 @@
 import { importWeekend, exportWeekend } from "../include/jsonreader.js";
 import { Regatta, SignUp } from "../include/types.js";
 
+
+
+//import
+//export -> create
+//form -> import -> select -> export
+
+while (true) {
+    console.log("ctrl + z, to interrupt execution.");
+
+
+}
+
 const r: Regatta = importWeekend("weekend7");
 console.log("Drivers: ");
 console.log(r.signUps.filter(s => s.canDrive).map(s => s.name));

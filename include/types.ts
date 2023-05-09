@@ -14,3 +14,16 @@ export interface Regatta {
     location: string,
     signUps: SignUp[]
 }
+
+export interface Division {
+    div: string,
+    skipper: string,
+    crew: string
+}
+
+export interface TeamRoster {
+    regatta: Regatta,
+    divisions: Division[],
+    alternate: string,
+    driver: string
+}
