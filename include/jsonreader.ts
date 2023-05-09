@@ -1,7 +1,8 @@
-import { SignUp, Regatta } from "./types.js";
+import { SignUp, Regatta, TeamRoster } from "./types.js";
 import fs from 'fs';
 
-const dataPath = "./include/data/";
+const dataPath = "./data/";
+const rosterPath = "./rosters/";
 
 export function importWeekend(weekendId: string): Regatta {
     const p = dataPath.concat(weekendId).concat('.json');
@@ -13,6 +14,13 @@ export function importWeekend(weekendId: string): Regatta {
 }
 
 export function exportWeekend(regatta: Regatta): void {
-    fs.writeFileSync(dataPath.concat(regatta.id).concat('.json'), JSON.stringify(regatta));
+    exportBase(dataPath.concat(regatta.id).concat('.json'), regatta);
 }
 
+export function exportRoster(roster: TeamRoster): void {
+    exportBase(rosterPath.concat(roster.regatta.id).concat('.json'), roster);
+}
+
+function exportBase(p: fs.PathOrFileDescriptor, obj: Regatta | TeamRoster): void {
+    fs.writeFileSync(p, JSON.stringify(obj));
+}
