@@ -1,0 +1,37 @@
+{
+    "id": "weekend7",
+    "name": "Central 1FR",
+    "date": "03-19-2023",
+    "twoDays": false,
+    "location": "MassMaritime",
+    "signUps": [
+        {
+            "name": "Kate Myler",
+            "skipper": true,
+            "crew": false,
+            "bothDays": true,
+            "canDrive": false
+        },
+        {
+            "name": "Ozel Yilmazel",
+            "skipper": true,
+            "crew": false,
+            "bothDays": true,
+            "canDrive": true
+        },
+        {
+            "name": "Marshall Rodes",
+            "skipper": true,
+            "crew": true,
+            "bothDays": true,
+            "canDrive": false
+        },
+        {
+            "name": "Cat Lizarraga",
+            "skipper": false,
+            "crew": true,
+            "bothDays": true,
+            "canDrive": false
+        }
+    ]
+}
